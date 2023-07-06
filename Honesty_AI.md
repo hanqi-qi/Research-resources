@@ -3,7 +3,7 @@
 
 #### Question 1: how to express uncertainty/confidence
 
-<u>Solution 1: Trained with confidence annotations.</u>
+> Solution 1: Trained with confidence annotations.
 
 Collect human annotated confidence and correctness dataset, and train a calibrator/classifier on it. (Simply using the match or Bert model can predict the human annotation, which makes it possible to train a calibrator to predict the scores) Training Models to Predict Whether They Can Answer Questions Correctly
 
@@ -15,7 +15,7 @@ Related Papers:
 * Paper1: Language Models (Mostly) Know What They Know
 * Paper2: Teaching models to express their uncertainty in words
 
-solution 2:  Incorporate the generated logits into language expression
+> solution 2:  Incorporate the generated logits into language expression
 
 [Reducing Conversational Agents’ Overconfidence Through Linguistic Calibration](link)
 TL;DR: Align the model’s expressed confidence with its actual correctness/confidence.
@@ -39,22 +39,22 @@ Replace an option with “None of the Above”. (Worse)
 
 #### Question 3: LMs know **where** they induce this prediction.
 
-solution 1: decompose the reasoning process
+> solution 1: decompose the reasoning process
 
-[1] Chain of thoughts. 
-Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
-TL;DR Only 8 manually designed COT for few-shot learning achieve the SOTA 
-[2] Self-consistency
-Follow-up work, rather than using the single/beam-search result, they sample several outputs and use a majority vote for the final results. (self-consistency)
+[1] Chain of thoughts. Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.  
+* TL;DR Only 8 manually designed COT for few-shot learning achieve the SOTA  
 
-Solution 2: 
+[2] Self-consistency  
+* Follow-up work, rather than using the single/beam-search result, they sample several outputs and use a majority vote for the final results. (self-consistency)
+
+> Solution 2:  
 Selection-Inference: Exploiting Large Language Models for Interpretable Logical Reasoning
 
 LEARNING WHERE AND WHEN TO REASON IN NEURO-SYMBOLIC INFERENCE
 
-Solution 3: Retrieval-based methods
+> Solution 3: Retrieval-based methods
 
-[Rethinking with Retrieval: Faithful Large Language Model Inference].(https://arxiv.org/abs/2301.00303)
+[Rethinking with Retrieval: Faithful Large Language Model Inference](https://arxiv.org/abs/2301.00303)
 * Incorporate external knowledge to answer questions. The final prediction is the most likely reasoning path in all the selected knowledge paths.
 
 ### Take-Aways:
@@ -66,19 +66,16 @@ Human annotated different levels of uncertainty
 Use the hard label to approximate the soft label of P(True)
 RL is the best, but most complex to implement.
 
-#### Future work:
-Design a method to better calculate the uncertainty, using the existing method to find a metric, which can mimic people’s evaluation results (High correlation). 
-No training on human-annotated, but only prompt-based.
-Adversarial training/attack, contrastive learning. See Hehe ()
-Uncertainty degree is different in different tasks, across different domains.
-Locate/identify where the model is uncertain, to find the error.
-What if we Correct their errors in CoT,
+### Future work:
+Design a method to better calculate the uncertainty, using the existing method to find a metric, which can mimic people’s evaluation results (High correlation).  
+No training on human-annotated, but only prompt-based.  
+Adversarial training/attack, contrastive learning.  
+Uncertainty degree is different in different tasks, across different domains.  
+Locate/identify where the model is uncertain, to find the error.  
+What if we Correct their errors in CoT.  
 
+### Reading materials (survey)
 
-#### General Survey
-
-Language Models (Mostly) Know What They Know. OpenAI(Anthropic)
-
-Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond
-
+Language Models (Mostly) Know What They Know. OpenAI(Anthropic)  
+Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond  
 Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models
