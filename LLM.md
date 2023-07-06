@@ -48,6 +48,7 @@ Training corpus: （570G）
 GPT-3 中的 few-shot 对于同一个下游任务，通常采用固定的任务描述方式，而且需要人去探索哪一种任务表述方式更好.
 SFT (supervised fine tuning)
 InstructGPT 在 SFT 中标注的数据，正是为了消除这种模型预测与用户表达习惯之间的 gap。在标注过程中，他们从 GPT-3 的用户真实请求中采样大量下游任务的描述，然后让标注人员对任务描述进行续写，从而得到该问题的高质量回答。这里用户真实请求又被称为某个任务的指令，即 InstructGPT 的核心思想“基于人类反馈的指令微调”。
+
 RLHF [BLOG]
 Reward model, input: text, output: score/reward, r
 Training objective: $$r-\lambda*KL(LM0|LM_{current})$$
@@ -55,9 +56,11 @@ Training objective: $$r-\lambda*KL(LM0|LM_{current})$$
 ### Other Encoder-Decoder Model Structures
 
 BART&T5: Encoder-Decoder 
+
 Large Language Model without Instruction Fine-tune
 
 T5: encoder-decoder, GPT: decoder; 
+
 从 GPT-3 开始才是真正意义的大模型
 GPT-3 将模型参数规模扩大至 175B， 是 GPT-2 的 100 倍
 
