@@ -89,4 +89,5 @@ T5: encoder-decoder, GPT: decoder;
 GPT-3 将模型参数规模扩大至 175B， 是 GPT-2 的 100 倍
 <img width="589" alt="Screenshot 2023-07-06 at 14 34 31" src="https://github.com/hanqi-qi/Research-resources/assets/74981442/c42da69b-d0b6-40d1-9ae9-66b8cdcafb9b">
 
-
+Reference Blog
+[https://www.zhihu.com/people/chen-xi-3-93-81](https://zhuanlan.zhihu.com/p/614766286) (highly recommended!!!)
